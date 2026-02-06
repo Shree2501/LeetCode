@@ -8,7 +8,7 @@ public:
             bool found = false;
             for(int j = 0; j < t.length(); j++){
                 if(s[i] == t[j]){
-                    t[j] = '#';
+                    t.erase(t.begin() + j);
                     found = true;
                     break;
                 }
