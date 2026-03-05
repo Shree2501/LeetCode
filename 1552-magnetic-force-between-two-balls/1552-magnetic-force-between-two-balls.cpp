@@ -1,15 +1,15 @@
 class Solution {
 public:
-    bool isPossible(vector <int> &position, int n, int m, int minStall){
+    bool isPossible(vector <int> &position, int n, int m, int minBalls){
         int balls = 1, last_pos = position[0];
         for( int i = 1; i < n; i++){
-            if((position[i] - last_pos) >= minStall){
+            if((position[i] - last_pos) >= minBalls){
                 balls++;
                 last_pos = position[i];
             }
-        }
-        if(balls == m){
+            if(balls == m){
             return true;
+            }
         }
         return false;
     } 
